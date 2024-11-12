@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body style="background-color:blueviolet; text-align: center;">
+    
+<!-- Today's Task 
+
+practice events (keyboard,form,window)
+research about lexical environment,closure -->
+<p>practice events (keyboard,forms,window):-</p>
+
+<p id="win"></p>
+<p id="won"></p>
+<p id="sz"></p>
+
+<p>Keyboard events</p>
+<input type="text" name="" id="" onkeydown="my()"><br>
+<input type="text" onkeyup="myy()"><br>
+<input type="text" onkeypress="myyy()"><br><br>
+
+<p>form events</p>
+<form action="" onreset="rs()">
+    <input type="text" onchange="fm()" onfocus="fmm()">
+    <input type="text" onblur="fmmm()">
+    <input type="text" oninput="fmmmm()" value="Rajesh">
+    <input type="reset">
+    <button onmouseover="this.innerHTML='Button'" onmouseleave="this.innerHTML='submit'">submit</button>
+</form>
+
+
+<script>
+
+    //-----windows-Events----//
+//--onload-onunload and resize----//
+window.addEventListener("click",myfun)
+function myfun(){
+    document.getElementById("win").innerHTML="This is windows click"
+}
+
+//-load event should be return in the body tag-----//
+window.addEventListener("load",funn)
+function funn(){
+    document.getElementById("won").innerHTML="this is loaded"
+}
+
+//--resize will display when u change the window size---//
+window.addEventListener("resize",funnn)
+function funnn(){
+    let txt="window size: width=" + window.outerWidth + "height=" + window.outerHeight 
+    document.getElementById("sz").innerHTML=txt
+}
+
+// window.addEventListener("unload",funnnn)
+// function funnnn(){
+//     alert("thank you sir")
+// }
+
+//-------Keyword-events----------------///
+//----onkeydown-onkeyup-onkeypress-------///
+
+function my(){
+    alert("pressed key down")
+}
+function myy(){
+    alert("released key up")
+}
+function myyy(){
+    alert("Key is pressing")
+}
+
+//------------Form events----------------/////
+///------onchange-onfocus-onblur-oninput-onreset-onsubmit---///
+
+function fm(){
+    alert("content changed")
+}
+function fmm(){
+    alert("onfocused it")
+}
+function fmmm(){
+    alert("blurred content not filled completelly")
+}
+function fmmmm(){
+    alert("input is changed")
+}
+function rs(){
+    alert("form reseted")
+}
+</script>
+</body>
+</html>
